@@ -10,14 +10,15 @@ from django.core.validators import validate_email
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 
-from .forms import InviteForm, CleanEmailMixin
+from .forms import CleanEmailMixin
 from .exceptions import AlreadyInvited, AlreadyAccepted, UserRegisteredEmail
 from .app_settings import app_settings
 from .adapters import get_invitations_adapter
 from .signals import invite_accepted
-from .utils import get_invitation_model
+from .utils import get_invitation_model, get_invite_form
 
 Invitation = get_invitation_model()
+InviteForm = get_invite_form()
 
 
 class SendInvite(FormView):
