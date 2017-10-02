@@ -86,11 +86,17 @@ class AppSettings(object):
 
     @property
     def ADMIN_ADD_FORM(self):
-        return self._setting("ADMIN_ADD_FORM", "invitations.forms.InvitationAdminAddForm")
+        return self._setting(
+            "ADMIN_ADD_FORM",
+            "invitations.forms.InvitationAdminAddForm"
+        )
 
     @property
     def ADMIN_CHANGE_FORM(self):
-        return self._setting("ADMIN_CHANGE_FORM", "invitations.forms.InvitationAdminChangeForm")
+        return self._setting(
+            "ADMIN_CHANGE_FORM",
+            "invitations.forms.InvitationAdminChangeForm"
+        )
 
 
 app_settings = AppSettings('INVITATIONS_')
