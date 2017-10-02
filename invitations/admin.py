@@ -3,8 +3,8 @@ from django.contrib import admin
 from .utils import get_invitation_model, get_invitation_admin_add_form, get_invitation_admin_change_form
 
 Invitation = get_invitation_model()
-InvitationAdminAddForm = get_invitation_admin_add_form
-InvitationAdminChangeForm = get_invitation_admin_change_form
+InvitationAdminAddForm = get_invitation_admin_add_form()
+InvitationAdminChangeForm = get_invitation_admin_change_form()
 
 
 class InvitationAdmin(admin.ModelAdmin):
